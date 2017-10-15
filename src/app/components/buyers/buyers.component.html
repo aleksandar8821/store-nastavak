@@ -1,0 +1,36 @@
+<p>
+  buyers works!
+</p>
+
+<table class="table">
+	<tr *ngFor = "let buyer of buyers; let i = index">
+		<td>{{buyer.firstName}}</td>
+		<td>{{buyer.lastName}}</td>
+		<td>{{buyer.email}}</td>
+		<td><div *ngFor = "let product of buyer.products" >{{product.name}}</div></td>
+		<td><a routerLink = "/buyers/{{buyer.id}}">Check latest purchases</a></td>
+		<td><button type="submit" (click) = "deleteBuyer(i)"> delete buyer </button></td>
+	</tr>
+</table>
+
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">First name</label>
+    
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter first name" name="firstName" [(ngModel)] = "newBuyer.firstName">
+  </div>
+    
+  <div class="form-group">
+    <label for="exampleInputEmail1">Last name</label>
+
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter last name" name="lastName" [(ngModel)] = "newBuyer.lastName">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" [(ngModel)] = "newBuyer.email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click) = "addBuyer()">Submit</button>
+</form>

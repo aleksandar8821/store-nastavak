@@ -1,0 +1,15 @@
+<br>
+<div class="container">
+	
+	  <ul class="list-group">
+	  	<li class="list-group-item"><strong>First name: </strong>{{ buyer.firstName }}</li>
+	  	<li class="list-group-item"><strong>Last name: </strong>{{ buyer.lastName }}</li>
+	  	<li class="list-group-item"><strong>Email: </strong>{{ buyer.email }}</li>
+	  </ul>
+	  <br>
+	  <strong>Products:</strong>
+	  <ul>
+	  	<li *ngFor = "let product of buyer.products">{{product.name}}</li>
+	  </ul>
+	  <a routerLink="/buyers">Back</a>
+</div>
