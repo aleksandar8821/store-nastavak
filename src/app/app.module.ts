@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { FormsModule } from '@angular/forms';
 
 import { BuyersServiceService } from './services/buyers-service.service';
+import { ProductsService } from './services/products.service';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { BuyersComponent } from './components/buyers/buyers.component';
@@ -23,7 +24,7 @@ import { BuyerDetailsComponent } from './components/buyers/buyer-details/buyer-d
     AppRoutingModule,
     FormsModule
   ],
-  providers: [BuyersServiceService],
+  providers: [BuyersServiceService, ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

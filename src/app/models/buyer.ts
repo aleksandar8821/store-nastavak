@@ -6,7 +6,7 @@ export class Buyer {
 	firstName: string
 	lastName: string
 	email: string
-  products:Array<Product>
+  products:Array<Object>
 
 
 }
