@@ -2,13 +2,19 @@
   products works!
 </p>
 
+<div class="input-group col-md-5 pl-0 my-lg-4 my-2">
+  <span class="input-group-addon">Filter by name</span>
+  <input [(ngModel)]="filterProduct" type="text" class="form-control"/>
+</div>
+
+
 <div class="container">
 	<table class="table">
 		<tr>
 			<th>Name</th>
 			<th>Quantity</th>
 		</tr>
-		<tr *ngFor = "let product of products">
+		<tr *ngFor = "let product of products | filter: 'name' : filterProduct">
 			<td>{{product.name}}</td>
 			<td>{{product.quantity}}</td>
 		</tr>

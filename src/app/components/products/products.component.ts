@@ -10,6 +10,7 @@ import { Product } from '../../models/product';
 export class ProductsComponent implements OnInit {
 
 	products:Array<Product>;
+	filterProduct: string = '';
 
   constructor(private productsService:ProductsService ) { 
   	this.products = productsService.getProducts();

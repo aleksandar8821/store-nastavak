@@ -10,6 +10,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { BuyersComponent } from './components/buyers/buyers.component';
 import { ProductsComponent } from './components/products/products.component';
 import { BuyerDetailsComponent } from './components/buyers/buyer-details/buyer-details.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BuyerDetailsComponent } from './components/buyers/buyer-details/buyer-d
     LayoutComponent,
     BuyersComponent,
     ProductsComponent,
-    BuyerDetailsComponent
+    BuyerDetailsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
