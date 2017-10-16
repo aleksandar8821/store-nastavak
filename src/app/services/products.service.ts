@@ -33,4 +33,25 @@ export class ProductsService {
   	return this.products;
   }
 
+  public findProduct(products){
+    return this.products.find((product) => {
+      return product['id'] === products.id;
+    })
+  }
+
+
+  public addQuantity(product) {
+    let singleProduct = this.findProduct(product);
+    return singleProduct.quantity ++;
+  }
+
+  public removeQuantity(product) {
+    let singleProduct = this.findProduct(product);
+    if (singleProduct.quantity >= 1) {
+    	return singleProduct.quantity --;
+    }
+    
+  }
+
+
 }

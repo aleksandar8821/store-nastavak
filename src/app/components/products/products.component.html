@@ -17,6 +17,22 @@
 		<tr *ngFor = "let product of products | filter: 'name' : filterProduct">
 			<td>{{product.name}}</td>
 			<td>{{product.quantity}}</td>
+			 <td>
+          <button 
+            (click)="addQuantity(product)" 
+            class="btn btn-primary"> + 
+          </button>
+          <button 
+            *ngIf="product.quantity >= 1" 
+            (click)="removeQuantity(product)" 
+            class="btn btn-primary"> - 
+          </button>
+          <button 
+            *ngIf="product.quantity == 0" 
+            class="btn btn-danger"> - 
+          </button>
+        </td>
+
 		</tr>
 	</table>
 </div>
